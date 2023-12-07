@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const breadthInput = document.getElementsByName("breadth")[0];
         const unitSelect = document.getElementsByName("unit")[0];
 
-        const length = parseFloat(lengthInput.value);
-        const breadth = parseFloat(breadthInput.value);
+        const length = parseFloat(lengthInput.value).toFixed(2);
+        const breadth = parseFloat(breadthInput.value).toFixed(2);
         const unit = unitSelect.value;
 
         if (isNaN(length) || isNaN(breadth)) {
