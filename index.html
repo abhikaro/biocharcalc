@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Biochar GeoMix 11 Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Biochar GeoMix 11 Calculator</h1>
+        <form>
+            <label for="length">Plot Length:</label>
+            <input type="number" name="length" placeholder="Enter length of Plot for one crop" required>
+            <br>
+            <label for="breadth">Plot Width:</label>
+            <input type="number" name="breadth" placeholder="Enter width of the plot" required>
+            <br>
+            <label for="unit">Unit:</label>
+            <select name="unit">
+                <option value="feet">Feet</option>
+                <option value="meters">Meters</option>
+            </select>
+            <br>
+            <button type="submit">Calculate subplot and GeoMix Quantity</button>
+        </form>
+
+        <canvas id="canvas" width="400" height="200"></canvas>
+    </div>
+    <script src="script_with_canvas.js"></script>
+</body>
+</html>
