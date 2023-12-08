@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         // Multiply by 2, 4, 8 for the second, third, and fourth subplot respectively
         const multiplier = [0, 2, 4, 8][subplotIndex];
-        const weight = Math.round(subplotArea * multiplier);
+        const weight = Math.round(subplotArea * multiplier * 2) / 2;
     
         return `${weight} Kgs`;
     }
