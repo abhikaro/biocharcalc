@@ -113,13 +113,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Determine the longer and shorter sides
-        const longerSide = Math.max(length, breadth);
+        let longerSide = Math.max(length, breadth);
         const shorterSide = Math.min(length, breadth);
+
+        if (unit === "feet") {
+            longerSide = longerSide - 3; // Convert from square feet to square meters
+        } else {
+            longerSide = longerSide - 0.91;
+        }
 
         // Calculate subplots
         const subplotLength = longerSide / 4;
         const subplotBreadth = shorterSide;
-
+ 
         // Display result
         drawRectangles(subplotLength, subplotBreadth);
     }
